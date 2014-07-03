@@ -13,7 +13,6 @@ Add the post type support 'thumbnails' to any post type
 ### Step 2
 Specify the thumbnails you want to use
 	
-	:::php
 	'supports'             => array( 'title', 'editor', 'thumbnails', 'revisions' ),
 	'thumbnails'           => array(
 		'main-image'       => array(
@@ -31,18 +30,18 @@ Display the thumbnails with one of the following functions. These are near equiv
 		tp_the_post_thumbnail( 'main-image', 'large' );
 	}
 
-Display thumbnail:
+**Display thumbnail**
 	
 	tp_the_post_thumbnail( $thumbnail, $size = 'thumbnail', $attr = '' )
 
-Check if there is a thumbnail set:
+**Check if there is a thumbnail set**
 	
 	tp_has_post_thumbnail( $post_id, $thumbnail )
 
-Retrieve thumbnail:
+**Retrieve thumbnail**
 	
 	tp_get_the_post_thumbnail( $post_id, $thumbnail, $size = 'thumbnail', $attr = '' )
 
-Get the attachment ID of a thumbnail
+**Get the attachment ID of a thumbnail**
 
 	tp_get_post_thumbnail_id( $post_id, $thumbnail )
