@@ -87,7 +87,7 @@ class TP_Multiple_Thumbnails {
 					continue;
 				
 				$post_type = get_post_type_object( $post_type );
-				if( ! is_array( $post_type->thumbnails ) )
+				if( ! isset( $post_type->thumbnails ) || ! is_array( $post_type->thumbnails ) )
 					continue;
 
 				$this->post_types[ $post_type->name ] = $post_type->thumbnails;
@@ -127,8 +127,8 @@ class TP_Multiple_Thumbnails {
 	 * Enqueue scripts
 	 */
 	function enqueue_scripts() {
-		wp_enqueue_script( 'tp-multiple-thumbnails', get_stylesheet_directory_uri() . '/assets/plugins/multiple-thumbnails/js/admin.js', array( 'jquery' ) );
-		wp_enqueue_style( 'tp-multiple-thumbnails', get_stylesheet_directory_uri() . '/assets/plugins/multiple-thumbnails/sass/admin.css' );
+		wp_enqueue_script( 'tp-multiple-thumbnails', plugins_url( 'assets/js/admin.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_style( 'tp-multiple-thumbnails', plugins_url( 'assets/sass/admin.css', __FILE__ ) );
 	}
 
 	/**
