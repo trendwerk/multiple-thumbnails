@@ -1,0 +1,16 @@
+{
+	"name": "trendwerk/multiple-thumbnails",
+	"description": "Allows multiple featured images, specified per post type.",
+	"type": "wordpress-muplugin",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Harold Angenent",
+			"email": "harold@trendwerk.nl"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"composer/installers": "v1.0.19"
+    }
+}
