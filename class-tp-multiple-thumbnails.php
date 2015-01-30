@@ -2,6 +2,13 @@
 /**
  * Plugin Name: Multiple thumbnails
  * Description: Allows multiple featured images, specified per post type.
+ *
+ * Plugin URI: https://github.com/trendwerk/multiple-thumbnails
+ * 
+ * Author: Trendwerk
+ * Author URI: https://github.com/trendwerk
+ * 
+ * Version: 1.0.0
  */
 
 /**
