@@ -134,6 +134,11 @@ class TP_Multiple_Thumbnails {
 	 * Enqueue scripts
 	 */
 	function enqueue_scripts() {
+		$screen = get_current_screen();
+		
+		if( isset( $this->post_types[ $screen->id ] ) )
+			wp_enqueue_media();
+
 		wp_enqueue_script( 'tp-multiple-thumbnails', plugins_url( 'assets/js/admin.js', __FILE__ ), array( 'jquery' ) );
 		wp_enqueue_style( 'tp-multiple-thumbnails', plugins_url( 'assets/sass/admin.css', __FILE__ ) );
 	}
