@@ -74,7 +74,7 @@ class TP_Multiple_Thumbnails {
 	var $post_types = array();
 	
 	function __construct() {
-		add_action( 'init', array( $this, 'init' ), 11 );
+		add_action( 'init', array( $this, 'init' ), 10000 );
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
