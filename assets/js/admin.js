@@ -11,7 +11,7 @@ jQuery( function( $ ) {
 		if( typeof( TP_Multiple_Thumbnails ) !== "undefined" )
 			TP_Multiple_Thumbnails.close();
 
-		TP_Multiple_Thumbnails = wp.media.frames.customHeader = wp.media( {
+		TP_Multiple_Thumbnails = wp.media( {
 			title: $( TP_Selected_Thumbnail ).closest( '.tp-multiple-thumbnails-thumbnail' ).data( 'name' ),
 			library: {
 				type: 'image'
