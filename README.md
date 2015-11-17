@@ -6,13 +6,13 @@ Allows multiple featured images, specified per post type.
 ## Installation
 If you're using Composer to manage WordPress, add this plugin to your project's dependencies. Run:
 ```sh
-composer require trendwerk/multiple-thumbnails 1.0.2
+composer require trendwerk/multiple-thumbnails 1.0.3
 ```
 
 Or manually add it to your `composer.json`:
 ```json
 "require": {
-	"trendwerk/multiple-thumbnails": "1.0.2"
+	"trendwerk/multiple-thumbnails": "1.0.3"
 },
 ```
 

@@ -12,10 +12,16 @@ jQuery( function( $ ) {
 			TP_Multiple_Thumbnails.close();
 
 		TP_Multiple_Thumbnails = wp.media( {
-			title: $( TP_Selected_Thumbnail ).closest( '.tp-multiple-thumbnails-thumbnail' ).data( 'name' ),
-			library: {
-				type: 'image'
-			},
+			states: [
+				new wp.media.controller.Library({
+					title:       $( TP_Selected_Thumbnail ).closest( '.tp-multiple-thumbnails-thumbnail' ).data( 'name' ),
+					library:     wp.media.query( {
+						type:    'image'
+					} ),
+					filterable: 'uploaded',
+					priority:    20
+				})
+			]
 		} );
 
 		TP_Multiple_Thumbnails.on( 'select', function() {
